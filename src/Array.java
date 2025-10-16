@@ -1,9 +1,15 @@
 import java.util.*;
+
 public class Array {
-    public static void main(String[] args){
+    public static void main(String[] args) {
+
+        int[] nums = {1, 2, 3, 4, 5};
+        System.out.println(Arrays.toString(nums));
+        change(nums);
+        System.out.println(Arrays.toString(nums));
 
         //array of primitive
-    int[] arr;  //declaration of  an array
+   /* int[] arr;  //declaration of  an array
         arr = new int[3];  //initialization of array  //here object is actually created in the memory
      Scanner sc = new Scanner(System.in);
         //or we can do
@@ -36,6 +42,13 @@ public class Array {
         for(int i = 0 ; i<str.length ; i++ ){
             str[i] = sc.next();
         }
-        System.out.print(Arrays.toString(str));
+        System.out.print(Arrays.toString(str));  */
 
-}}
+
+    }
+        // mutability of arrays
+        static void change(int[] arr){
+               arr[0] = 4;
+        }
+
+}
