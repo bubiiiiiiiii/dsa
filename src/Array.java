@@ -1,21 +1,24 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Array {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-      //2D arrays
-       // int[][] arr = new int[3][]; //specifying column size isn't really necessary
+        System.out.print("Enter number of elements: ");
+        int n = sc.nextInt();
 
+        int[] arr = new int[n];
 
-        //directly assigning values
-        int[][] arr = {  // here rows are 3 but column is different
-                {1,2,3},
-                {1,2},
-                {1,2,3,4}
-        };
+        System.out.println("Enter elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
 
-        // index
-        //if we do arr[0] //output -> 1 2 3
-        //if we do arr[0][0] //output -> 1
+        int sum = 0;
+        for (int num : arr) {
+            sum += num;
+        }
 
-}}
+        System.out.println("Sum of array elements: " + sum);
+    }
+}
