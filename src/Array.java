@@ -1,24 +1,38 @@
-import java.util.Scanner;
-
 public class Array {
+
+
+    public static int findLargest(int[] arr) {
+
+        int max = arr[0];
+
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+
+        return max;
+    }
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter number of elements: ");
-        int n = sc.nextInt();
+        int[] arr1 = {3, 7, 2, 9, 1};
+        System.out.println("Array: [3, 7, 2, 9, 1]");
+        System.out.println("Largest: " + findLargest(arr1));
+        System.out.println();
 
-        int[] arr = new int[n];
 
-        System.out.println("Enter elements:");
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-        }
+        int[] arr2 = {-5, -2, -10, -1};
+        System.out.println("Array: [-5, -2, -10, -1]");
+        System.out.println("Largest: " + findLargest(arr2));
+        System.out.println();
 
-        int sum = 0;
-        for (int num : arr) {
-            sum += num;
-        }
 
-        System.out.println("Sum of array elements: " + sum);
+        int[] arr3 = {100};
+        System.out.println("Array: [100]");
+        System.out.println("Largest: " + findLargest(arr3));
     }
 }
+
+
