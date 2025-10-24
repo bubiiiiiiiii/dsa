@@ -8,27 +8,46 @@ class Node {
     }
 }
 
-public class linkedList {
-    public static void main(String[] args) {
+class LinkedList {
+    Node head;
 
-        Node n1 = new Node(10);
-        Node n2 = new Node(20);
-        Node n3 = new Node(30);
+    //insert a new node at the end
+    void insert(int data) {
+        Node newNode = new Node(data);
 
+        if (head == null) {
+            head = newNode;
+            return;
+        }
 
-        n1.next = n2;
-        n2.next = n3;
-
-
-        Node head = n1;
-
-        // Display the linked list
-        System.out.print("Linked List: ");
         Node current = head;
+        while (current.next != null) {
+            current = current.next;
+        }
+        current.next = newNode;
+    }
+
+
+    void display() {
+        Node current = head;
+        System.out.print("Linked List: ");
         while (current != null) {
             System.out.print(current.data + " ");
             current = current.next;
         }
+    }
+}
+
+public class linkedList {
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+
+        list.insert(10);
+        list.insert(20);
+        list.insert(30);
+        list.insert(40);
+
+        list.display();
     }
 }
 
