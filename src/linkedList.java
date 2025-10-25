@@ -11,20 +11,11 @@ class Node {
 class LinkedList {
     Node head;
 
-    //insert a new node at the end
-    void insert(int data) {
+    // Insert node at the beginning
+    void insertAtBeginning(int data) {
         Node newNode = new Node(data);
-
-        if (head == null) {
-            head = newNode;
-            return;
-        }
-
-        Node current = head;
-        while (current.next != null) {
-            current = current.next;
-        }
-        current.next = newNode;
+        newNode.next = head;
+        head = newNode;
     }
 
 
@@ -38,16 +29,14 @@ class LinkedList {
     }
 }
 
-public class linkedList {
+public class linkedList{
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
 
-        list.insert(10);
-        list.insert(20);
-        list.insert(30);
-        list.insert(40);
+        list.insertAtBeginning(30);
+        list.insertAtBeginning(20);
+        list.insertAtBeginning(10);
 
         list.display();
     }
 }
-
