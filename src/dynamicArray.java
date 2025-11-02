@@ -1,16 +1,23 @@
 import java.util.ArrayList;
-
+import java.util.Scanner;
 public class dynamicArray {
     public static void main(String[] args){
-        ArrayList<Integer> arr = new ArrayList<>(5);  //here i have defined the capacity 5
-        arr.add(1);
-        arr.add(2);
-        arr.add(3);
-        arr.add(4);
-        arr.add(5);
-        arr.add(6);
-        arr.add(7);  //but i can still add 7 elements
-        System.out.println(arr);
+        Scanner sc = new Scanner(System.in);
+        ArrayList<ArrayList<Integer>> arr = new ArrayList<>();
 
+        //initialization
+        for(int i=0; i<3; i++){
+            arr.add(new ArrayList<>());
+        }
+
+        //adding element
+           for(int i=0; i<3; i++){
+               for(int j=0; j<3; j++){
+                   arr.get(i).add(sc.nextInt());
+               }
+           }
+
+           //displaying
+        System.out.println(arr);
     }
 }
