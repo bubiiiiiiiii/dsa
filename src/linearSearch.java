@@ -8,10 +8,10 @@ public class linearSearch {
         if(name.length()==0){
           return false;
         }
-        for(int i=0; i<name.length(); i++){
-           if(target==name.charAt(i)){
-               return true;
-           }
+        for(char ch:name.toCharArray()){
+            if(ch==target){
+                return true;
+            }
         }
         return false;
    }
