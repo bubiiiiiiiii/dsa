@@ -1,0 +1,23 @@
+public class linearSearch {
+    public static void main(String[] args) {
+        int[] arr = {10, 23, 45, 70, 11, 15};
+        int target = 70;
+
+        int index = linearSearch(arr, target);
+
+        if (index == -1) {
+            System.out.println("Element not found");
+        } else {
+            System.out.println("Element found at index: " + index);
+        }
+    }
+
+    static int linearSearch(int[] arr, int target) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == target) {
+                return i; // Return index if found
+            }
+        }
+        return -1; // If target not found
+    }
+}
