@@ -1,7 +1,7 @@
 public class linearSearch {
     public static void main(String[] args) {
         int[] arr = {3,54,23,46,76};
-        int target = 46;
+        int target = 2;
         int ans = linearsearch(arr, target);  //calling function
         System.out.println("element found at index:"+" "+ans);  //printing output
     }
