@@ -8,7 +8,7 @@ public class linearSearch {
         if(name.length()==0){
           return false;
         }
-        for(char ch:name.toCharArray()){
+        for(char ch:name.toCharArray()){  //convert string into char array
             if(ch==target){
                 return true;
             }
