@@ -3,7 +3,11 @@ public class linearSearch {
         int[] arr = {3,54,23,46,76};
         int target = 2;
         int ans = linearsearch(arr, target);  //calling function
-        System.out.println("element found at index:"+" "+ans);  //printing output
+        if(ans == -1) {
+            System.out.println("Element not found");
+        } else {
+            System.out.println("Element found at index: " + ans);
+        }
     }
     static int linearsearch(int[] arr, int target) {
         if (arr.length == 0) {   //checking if array is empty
