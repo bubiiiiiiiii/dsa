@@ -1,23 +1,22 @@
 public class linearSearch {
     public static void main(String[] args) {
-        int[] arr = {10, 23, 45, 70, 11, 15};
-        int target = 70;
-
-        int index = linearSearch(arr, target);
-
-        if (index == -1) {
-            System.out.println("Element not found");
-        } else {
-            System.out.println("Element found at index: " + index);
-        }
+        int[] arr = {3,54,23,46,76};
+        int target = 46;
+        int ans = linearsearch(arr, target);  //calling function
+        System.out.println("element found at index:"+" "+ans);  //printing output
     }
+    static int linearsearch(int[] arr, int target) {
+        if (arr.length == 0) {   //checking if array is empty
+            return -1;   //return nothing if array is  empty
+        }
 
-    static int linearSearch(int[] arr, int target) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == target) {
-                return i; // Return index if found
+        for (int index = 0; index < arr.length; index++) {  //iterating over every element to find target
+            int element = arr[index];   //naming element to compare with target
+            if (element == target) {
+                return index;  //returns index of the target when found
             }
         }
-        return -1; // If target not found
+        return -1;  //if target not found
     }
+
 }
