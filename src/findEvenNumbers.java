@@ -1,8 +1,9 @@
 public class findEvenNumbers {
     public static void main(String[] args) {
-          int[] nums = {34,456,6543,54324,455573,2,3,89};
-          int ans = findNumbers(nums);
-          System.out.println("Numbers with even digits:" + ans);
+          int[] nums = {34,456,6543,54324,455573,2,3,89,-12};
+        //  int ans = findNumbers(nums);
+          //System.out.println("Numbers with even digits:" + ans);
+        System.out.println(digits(233445));  //tells the number of digits
     }
 
 
@@ -29,7 +30,7 @@ public class findEvenNumbers {
 
     //count number of digits in a number
     static int digits(int num){
-     int count = 0;
+        int count = 0;
        while(num>0) {
            count++;
            num = num/10;
