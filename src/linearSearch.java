@@ -16,7 +16,7 @@ public class linearSearch{
             for(int j=0;j<arr[i].length; j++){
                 int element = arr[i][j];
                 if(element==target){
-                    return i; //only written the index of the row
+                    return i,j; //invalid
                 }
             }
         }
