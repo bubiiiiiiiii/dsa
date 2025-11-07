@@ -3,7 +3,7 @@ public class findEvenNumbers {
           int[] nums = {34,456,6543,54324,455573,2,3,89,-12};
         //  int ans = findNumbers(nums);
           //System.out.println("Numbers with even digits:" + ans);
-        System.out.println(digits(-233445));  //returns 0 in case of negative digit
+        System.out.println(digits(0));  //returns 0 even though there is 1 digit(0)
     }
 
 
@@ -32,6 +32,9 @@ public class findEvenNumbers {
     static int digits(int num){
         if(num<0){  //converts negative number into positive
             num = num*-1;
+        }
+        if(num==0){  //if we dont do this it returns 0 number of digits for "0" but 0 itself will be counted as 1 digit
+            return 1;
         }
         int count = 0;
        while(num>0) {
