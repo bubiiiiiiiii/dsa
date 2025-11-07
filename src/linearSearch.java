@@ -8,18 +8,19 @@ public class linearSearch{
       int target = 7;
         System.out.println(search2DArray(arr, target));
     }
-    static int search2DArray(int[][] arr, int target){
+    static String search2DArray(int[][] arr, int target){
         if(arr.length==0){
-            return -1;
+            return "empty";
         }
         for(int i=0;i<arr.length; i++){
             for(int j=0;j<arr[i].length; j++){
                 int element = arr[i][j];
                 if(element==target){
-                    return i,j; //invalid
+                    //what we can do is either return a string
+                    return i + "," + j;
                 }
             }
         }
-        return -1;
+        return "not found";
     }
 }
