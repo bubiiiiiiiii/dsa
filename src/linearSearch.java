@@ -1,22 +1,25 @@
 public class linearSearch{
     public static void main(String[] args) {
-      int[] arr = {3,56,34,32,67,23};
-      int target = 32;
-      int start = 1;
-      int end = 4;
-        System.out.println(searchInRange(arr, target, 1, 4));
+      int[][] arr = {
+              {1,2,3},
+              {4,5,6},
+              {7,8,9}
+      };
+      int target = 7;
+        System.out.println(search2DArray(arr, target));
     }
-    static int searchInRange(int[] arr, int target, int start, int end){
-        if(arr.length == 0){
+    static int search2DArray(int[][] arr, int target){
+        if(arr.length==0){
             return -1;
         }
-        for(int i = start; i<end; i++){
-            int element = arr[i];
-            if(element==target){
-                return i;
+        for(int i=0;i<arr.length; i++){
+            for(int j=0;j<arr[i].length; j++){
+                int element = arr[i][j];
+                if(element==target){
+                    return i; //only written the index of the row
+                }
             }
         }
         return -1;
-
     }
 }
