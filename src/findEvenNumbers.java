@@ -29,7 +29,7 @@ public class findEvenNumbers {
 
 
     //count number of digits in a number
-    static int digits(int num){
+ /*   static int digits(int num){
         if(num<0){  //converts negative number into positive
             num = num*-1;
         }
@@ -37,10 +37,21 @@ public class findEvenNumbers {
             return 1;
         }
         int count = 0;
-       while(num>0) {
+       while(num>0) {  //while loop takes much more time
            count++;
            num = num/10;
        }
-        return count;
+        return count;   */
+
+
+    //more optimized way of counting digits
+    static int digits(int num){
+        if(num<0){
+           num = num*-1;
+        }
+        if(num == 0){
+            return 1;
+        }
+        return (int)(Math.log10(num)) + 1;
     }
 }
