@@ -4,7 +4,7 @@
 public class ceilingNumber {
     public static void main(String[] args) {
         int[] arr = {3,5,7,8,45,67,89,90};
-        int target = 80;
+        int target = 91;  //returns -1
         int ans  = ceilingBinary(arr, target);
         System.out.println(ans);
     }
@@ -12,7 +12,7 @@ public class ceilingNumber {
         int start = 0;
         int end = arr.length - 1;
 
-        if (target > arr[end]) return -1; // no ceiling exists
+        if (target > arr[end]){ return -1;} // no ceiling exists
 
         while (start <= end) {
             int mid = start + (end - start) / 2;
@@ -25,6 +25,7 @@ public class ceilingNumber {
                 end = mid - 1;
             }
         }
-        return arr[start];
+        return arr[start];  //at the end if no number=target element found the while loop breaks
+        //return start instead of -1
     }
-}
+} // whole code remains same as binary search except for return value
